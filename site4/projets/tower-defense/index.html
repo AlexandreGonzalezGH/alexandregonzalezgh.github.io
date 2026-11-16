@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tower Defense : Jeu de défense de tours 3D sous Unity | Alexandre Gonzalez</title>
+  <meta name="description" content="Tower Defense : jeu de défense de tours 3D sous Unity 6 avec énergie, économie et installations de soutien. Projet de Télécom SudParis, 2025-2026.">
+  <meta name="author" content="Alexandre Gonzalez">
+  <link rel="canonical" href="https://alexandregonzalezgh.github.io/projets/tower-defense/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Tower Defense : Jeu de défense de tours 3D sous Unity 6">
+  <meta property="og:description" content="Tower Defense : jeu de défense de tours 3D sous Unity 6 avec énergie, économie et installations de soutien. Projet de Télécom SudParis, 2025-2026.">
+  <meta property="og:url" content="https://alexandregonzalezgh.github.io/projets/tower-defense/">
+  <meta property="og:image" content="https://alexandregonzalezgh.github.io/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1c1845">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../../index.css">
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">A<span>.</span>GONZALEZ</a>
+    <nav aria-label="Navigation principale">
+      <ul class="site-nav">
+        <li><a href="../../index.html#projets">Projets</a></li>
+        <li><a href="../../index.html#parcours">Parcours</a></li>
+        <li><a href="../../index.html#competences">Compétences</a></li>
+        <li><a href="../../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="contenu">
+  <section class="band project-page">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="../../index.html">Accueil</a> <span aria-hidden="true">/</span> <a href="../../index.html#projets">Projets</a> <span aria-hidden="true">/</span> <span aria-current="page">Tower Defense</span></nav>
+      <article class="case" id="tower-defense">
+        <div class="case-text">
+          <span class="tag">Jeu 3D · Unity</span>
+          <h1><span class="name">Tower Defense</span> <span class="desc">Jeu de défense de tours 3D sous Unity 6</span></h1>
+          <dl class="facts">
+            <div><dt>Période</dt><dd>déc. 2025 – janv. 2026 · cours CSC 4253</dd></div>
+            <div><dt>Équipe</dt><dd>avec Antonin Fruchet et Julien Wang</dd></div>
+            <div><dt>Outils</dt><dd>Unity 6, C#</dd></div>
+          </dl>
+          <p>Jeu de défense de tours en 3D, style cartoon, réalisé pour le cours d'architecture des moteurs de jeux. Des vagues de monstres traversent la carte vers vos cristaux : il faut placer et alimenter en énergie des tours, les renforcer avec des installations de soutien et gérer son argent. Les monstres choisissent leur chemin avec l'algorithme de Dijkstra, et les cartes sont des images PNG lues pixel par pixel, vérifiées avant d'être proposées.</p>
+          <h4>Ma contribution</h4>
+          <ul>
+            <li>Installations de soutien (Radar, Factory, Storage) : bonus de portée, de puissance et de cadence par zone d'effet, réglables dans l'inspecteur Unity</li>
+            <li>Boucle économique : achat, revente, récompenses déclenchées par la mort des monstres, affichage de l'argent et des coûts dans le HUD</li>
+            <li>Zoom à la molette, sauvegarde de la résolution, effets sonores des monstres, particules du Radar</li>
+          </ul>
+          <h4>Limites que j'identifie</h4>
+          <ul>
+            <li>Les projectiles basés sur des Rigidbody ratent souvent leur cible</li>
+            <li>L'équilibrage de l'économie est peu poussé</li>
+            <li>Des ralentissements apparaissent avec beaucoup d'objets en scène</li>
+          </ul>
+        </div>
+        <div class="case-visual">
+          <figure><img src="../../assets/hud-defense.jpg" alt="Phase de défense : tours, monstres et interface" width="1100" height="616" loading="lazy"><figcaption>Phase de défense</figcaption></figure>
+          <div class="duo">
+            <figure><img src="../../assets/menu.jpg" alt="Menu principal du jeu" loading="lazy"><figcaption>Menu principal</figcaption></figure>
+            <figure><img src="../../assets/hud-preparation.jpg" alt="Phase de préparation" loading="lazy"><figcaption>Phase de préparation</figcaption></figure>
+          </div>
+        </div>
+      </article>
+      <nav class="pager" aria-label="Autres projets">
+        <a class="prev" href="../cyranose/index.html"><span>← Projet précédent</span><strong>CyraNose</strong></a><a class="next" href="../hubris/index.html"><span>Projet suivant →</span><strong>Hubris</strong></a>
+      </nav>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">© 2026 Alexandre Gonzalez · <a href="../../index.html">Accueil</a> · <a href="../../index.html#contact">Contact</a></footer>
+</body>
+</html>

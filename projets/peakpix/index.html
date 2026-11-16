@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PeakPix : Application web Symfony de galeries de sommets | Alexandre Gonzalez</title>
+  <meta name="description" content="PeakPix : application web Symfony pour répertorier ses photos de sommets et les exposer sur des murs publics ou privés. Projet de Télécom SudParis, 2026.">
+  <meta name="author" content="Alexandre Gonzalez">
+  <link rel="canonical" href="https://alexandregonzalezgh.github.io/projets/peakpix/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="PeakPix : Application web Symfony de galeries de photos de sommets">
+  <meta property="og:description" content="PeakPix : application web Symfony pour répertorier ses photos de sommets et les exposer sur des murs publics ou privés. Projet de Télécom SudParis, 2026.">
+  <meta property="og:url" content="https://alexandregonzalezgh.github.io/projets/peakpix/">
+  <meta property="og:image" content="https://alexandregonzalezgh.github.io/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1c1845">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../../index.css">
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">A<span>.</span>GONZALEZ</a>
+    <nav aria-label="Navigation principale">
+      <ul class="site-nav">
+        <li><a href="../../index.html#projets">Projets</a></li>
+        <li><a href="../../index.html#parcours">Parcours</a></li>
+        <li><a href="../../index.html#competences">Compétences</a></li>
+        <li><a href="../../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="contenu">
+  <section class="band project-page">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="../../index.html">Accueil</a> <span aria-hidden="true">/</span> <a href="../../index.html#projets">Projets</a> <span aria-hidden="true">/</span> <span aria-current="page">PeakPix</span></nav>
+      <article class="case" id="peakpix">
+        <div class="case-text">
+          <span class="tag">Web · Symfony</span>
+          <h1><span class="name">PeakPix</span> <span class="desc">Application web Symfony de galeries de photos de sommets</span></h1>
+          <dl class="facts">
+            <div><dt>Période</dt><dd>1<sup>er</sup> semestre 2026</dd></div>
+            <div><dt>Cours</dt><dd>CSC4101, Télécom SudParis</dd></div>
+            <div><dt>Outils</dt><dd>Symfony 6.4, Doctrine, Twig</dd></div>
+          </dl>
+          <p>Application web pour les passionnés de montagne. Chaque membre répertorie ses photos de sommets (nom, altitude, massif, coordonnées GPS) dans un album privé, puis en expose une sélection sur des murs publics ou privés. Une photo peut figurer sur plusieurs murs.</p>
+          <h4>Ce qui est implémenté</h4>
+          <ul>
+            <li>Authentification par formulaire, rôles utilisateur et administrateur</li>
+            <li>Modèle Doctrine : Member, Album, SummitPic, Wall, avec relations OneToOne, OneToMany et ManyToMany</li>
+            <li>Envoi d'images avec VichUploaderBundle, jeu de données de démonstration, tests fonctionnels PHPUnit</li>
+          </ul>
+          <h4>Suite logique</h4>
+          <ul>
+            <li>Un <code>Voter</code> Symfony pour restreindre la modification d'un mur à son propriétaire</li>
+            <li>Vérifier qu'un mur est publié avant d'afficher une de ses photos</li>
+            <li>Page d'inscription</li>
+          </ul>
+        </div>
+        <div class="case-visual">
+          <p class="model-title">Modèle de données</p>
+          <ul class="model" aria-label="Relations entre les entités de PeakPix">
+            <li><b>Member</b><i>1 — 1</i><b>Album</b></li>
+            <li><b>Album</b><i>1 — *</i><b>SummitPic</b></li>
+            <li><b>Wall</b><i>* — *</i><b>SummitPic</b></li>
+            <li><b>Member</b><i>1 — *</i><b>Wall</b></li>
+          </ul>
+        </div>
+      </article>
+      <nav class="pager" aria-label="Autres projets">
+        <a class="prev" href="../hubris/index.html"><span>← Projet précédent</span><strong>Hubris</strong></a><span></span>
+      </nav>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">© 2026 Alexandre Gonzalez · <a href="../../index.html">Accueil</a> · <a href="../../index.html#contact">Contact</a></footer>
+</body>
+</html>

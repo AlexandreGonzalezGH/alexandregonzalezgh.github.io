@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hubris : Platformer 2.5D sous Unity | Alexandre Gonzalez</title>
+  <meta name="description" content="Hubris : platformer 2.5D sous Unity développé à cinq, avec ennemis à machines à états, boss et shaders. Projet de Télécom SudParis, 2025.">
+  <meta name="author" content="Alexandre Gonzalez">
+  <link rel="canonical" href="https://alexandregonzalezgh.github.io/projets/hubris/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Hubris : Platformer 2">
+  <meta property="og:description" content="Hubris : platformer 2.5D sous Unity développé à cinq, avec ennemis à machines à états, boss et shaders. Projet de Télécom SudParis, 2025.">
+  <meta property="og:url" content="https://alexandregonzalezgh.github.io/projets/hubris/">
+  <meta property="og:image" content="https://alexandregonzalezgh.github.io/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1c1845">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../../index.css">
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">A<span>.</span>GONZALEZ</a>
+    <nav aria-label="Navigation principale">
+      <ul class="site-nav">
+        <li><a href="../../index.html#projets">Projets</a></li>
+        <li><a href="../../index.html#parcours">Parcours</a></li>
+        <li><a href="../../index.html#competences">Compétences</a></li>
+        <li><a href="../../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="contenu">
+  <section class="band project-page">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="../../index.html">Accueil</a> <span aria-hidden="true">/</span> <a href="../../index.html#projets">Projets</a> <span aria-hidden="true">/</span> <span aria-current="page">Hubris</span></nav>
+      <article class="case" id="hubris">
+        <div class="case-text">
+          <span class="tag">Jeu 2.5D · Unity</span>
+          <h1><span class="name">Hubris</span> <span class="desc">Platformer 2.5D sous Unity, développé à cinq</span></h1>
+          <dl class="facts">
+            <div><dt>Période</dt><dd>janv. – mai 2025</dd></div>
+            <div><dt>Équipe</dt><dd>avec Matthias Bienvenu, Owan Mannone, Gabriel Donio et Aymeric Portal</dd></div>
+            <div><dt>Outils</dt><dd>Unity, C#</dd></div>
+          </dl>
+          <p>Platformer 2.5D construit avec les outils 3D d'Unity, présenté à l'oral dans le cadre du projet de développement informatique. Le joueur dispose d'une physique de déplacement écrite sur mesure (saut, double saut, saut maintenu) et affronte des ennemis puis un boss à travers plusieurs zones. L'équipe a aussi travaillé les shaders et les effets visuels : herbe en GPU instancing, pluie, particules, ciel d'orage.</p>
+          <h4>Ma contribution</h4>
+          <ul>
+            <li>IA des ennemis par machine à états finis : <code>SleepState</code>, <code>PatrolState</code> (waypoints) et <code>AttackState</code> (approche, attaque lourde avec répulsion), avec transitions déclenchées par la détection du joueur</li>
+            <li>Modélisation mathématique d'une attaque du boss : trajectoires paraboliques calculées en temps réel</li>
+            <li>Itérations sur le game feel et la difficulté</li>
+          </ul>
+          <h4>Ce que j'en retiens</h4>
+          <ul>
+            <li>Accepter les impasses : une centaine d'heures de l'équipe perdues sur des modèles et animations non retenus</li>
+            <li>Savoir passer la main et sacrifier ses envies au profit du collectif</li>
+            <li>Les difficultés de Git en équipe de cinq : des commits peu organisés, que je soigne davantage depuis</li>
+          </ul>
+        </div>
+        <div class="case-visual">
+          <figure><img src="../../assets/hub-foret.jpg" alt="Forêt de nuit avec lucioles" loading="lazy"><figcaption>Zone de forêt, effet de lucioles</figcaption></figure>
+          <figure><img src="../../assets/hub-herbe.jpg" alt="Herbe rendue par GPU instancing" loading="lazy"><figcaption>Herbe animée par shader</figcaption></figure>
+        </div>
+      </article>
+      <nav class="pager" aria-label="Autres projets">
+        <a class="prev" href="../tower-defense/index.html"><span>← Projet précédent</span><strong>Tower Defense</strong></a><a class="next" href="../peakpix/index.html"><span>Projet suivant →</span><strong>PeakPix</strong></a>
+      </nav>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">© 2026 Alexandre Gonzalez · <a href="../../index.html">Accueil</a> · <a href="../../index.html#contact">Contact</a></footer>
+</body>
+</html>

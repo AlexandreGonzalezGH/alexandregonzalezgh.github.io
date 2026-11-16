@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CyraNose : Jeu de rôle tactique 2D en C++ | Alexandre Gonzalez</title>
+  <meta name="description" content="CyraNose : jeu de rôle tactique 2D en C++17 (SFML) mêlant escrime et joutes verbales. Projet d'Alexandre Gonzalez et Aïcha Koureich, 2026.">
+  <meta name="author" content="Alexandre Gonzalez">
+  <link rel="canonical" href="https://alexandregonzalezgh.github.io/projets/cyranose/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="CyraNose : Jeu de rôle tactique 2D en C++ inspiré de Cyrano de Bergerac">
+  <meta property="og:description" content="CyraNose : jeu de rôle tactique 2D en C++17 (SFML) mêlant escrime et joutes verbales. Projet d'Alexandre Gonzalez et Aïcha Koureich, 2026.">
+  <meta property="og:url" content="https://alexandregonzalezgh.github.io/projets/cyranose/">
+  <meta property="og:image" content="https://alexandregonzalezgh.github.io/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1c1845">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../../index.css">
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">A<span>.</span>GONZALEZ</a>
+    <nav aria-label="Navigation principale">
+      <ul class="site-nav">
+        <li><a href="../../index.html#projets">Projets</a></li>
+        <li><a href="../../index.html#parcours">Parcours</a></li>
+        <li><a href="../../index.html#competences">Compétences</a></li>
+        <li><a href="../../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="contenu">
+  <section class="band project-page">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="../../index.html">Accueil</a> <span aria-hidden="true">/</span> <a href="../../index.html#projets">Projets</a> <span aria-hidden="true">/</span> <span aria-current="page">CyraNose</span></nav>
+      <article class="case" id="cyranose">
+        <div class="case-text">
+          <span class="tag">Jeu 2D · C++</span>
+          <h1><span class="name">CyraNose</span> <span class="desc">Jeu de rôle tactique 2D en C++ inspiré de Cyrano de Bergerac</span></h1>
+          <dl class="facts">
+            <div><dt>Période</dt><dd>juin 2026 · cours CSC4526</dd></div>
+            <div><dt>Équipe</dt><dd>binôme avec Aïcha Koureich</dd></div>
+            <div><dt>Outils</dt><dd>C++17, SFML 3, PugiXML, CMake, GoogleTest</dd></div>
+          </dl>
+          <p>Jeu de rôle tactique inspiré de Cyrano de Bergerac, où le verbe est aussi tranchant que l'acier. Le joueur affronte des adversaires en combinant escrime (Force) et joutes verbales (Éloquence), tout en gérant sa jauge d'inspiration et en achetant des objets dans une boutique. Après chaque victoire, son nez s'allonge un peu plus.</p>
+          <h4>Ma contribution</h4>
+          <ul>
+            <li>Interface de combat : barres de vie et de mana, encadrés, niveau de l'ennemi, placement des entités, info-bulles des affaiblissements et des boutons d'éloquence</li>
+            <li>Éloquence : tirades chargées depuis un fichier XML pour en ajouter facilement, et annulation d'une action avant de lancer l'épreuve</li>
+            <li>Équilibrage, nouveaux ennemis, règles des objets (un seul par tour, pas de bonus cumulables)</li>
+            <li>Tests unitaires GoogleTest sur les objets, les attaques et le joueur, et fusions des branches Git du projet</li>
+          </ul>
+          <h4>Réalisé par Aïcha Koureich</h4>
+          <ul>
+            <li>Boutique et sprites des objets, page de pause, corrections de bugs, diagramme de classes</li>
+          </ul>
+          <a class="link" href="https://github.com/AlexandreGonzalezGH/game-micro-project-csc4526">Code source sur GitHub →</a>
+        </div>
+        <div class="case-visual">
+          <div class="duo">
+            <figure><img src="../../assets/cyranose-combat.png" alt="Écran de combat de CyraNose" loading="lazy"><figcaption>Combat : vie, mana, niveau de l'ennemi</figcaption></figure>
+            <figure><img src="../../assets/cyranose-eloquence.png" alt="Tirade à compléter au clavier" loading="lazy"><figcaption>Éloquence : tirade à taper</figcaption></figure>
+            <figure><img src="../../assets/cyranose-qte.png" alt="Événement rapide : cercle à aligner" loading="lazy"><figcaption>Force : cercle à aligner (Espace)</figcaption></figure>
+            <figure><img src="../../assets/cyranose-shop.png" alt="Boutique d'armes et d'objets" loading="lazy"><figcaption>Boutique d'armes et d'objets</figcaption></figure>
+          </div>
+        </div>
+      </article>
+      <nav class="pager" aria-label="Autres projets">
+        <a class="prev" href="../cassiopee/index.html"><span>← Projet précédent</span><strong>Cassiopée</strong></a><a class="next" href="../tower-defense/index.html"><span>Projet suivant →</span><strong>Tower Defense</strong></a>
+      </nav>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">© 2026 Alexandre Gonzalez · <a href="../../index.html">Accueil</a> · <a href="../../index.html#contact">Contact</a></footer>
+</body>
+</html>

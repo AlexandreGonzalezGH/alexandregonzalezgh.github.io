@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cassiopée : Explicabilité de la génération de gestes 3D | Alexandre Gonzalez</title>
+  <meta name="description" content="Cassiopée : comparaison des modèles de génération de gestes 3D GestureLSM et MambaTalk avec 25, 50 et 100 % des données, et analyse Grad-CAM de l'usage de l'audio. Projet d'Alexandre Gonzalez et Mark Kriov, 2026.">
+  <meta name="author" content="Alexandre Gonzalez">
+  <link rel="canonical" href="https://alexandregonzalezgh.github.io/projets/cassiopee/">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Cassiopée : Les gestes 3D générés écoutent-ils vraiment l'audio ? Explicabilité de modèles de générati">
+  <meta property="og:description" content="Cassiopée : comparaison des modèles de génération de gestes 3D GestureLSM et MambaTalk avec 25, 50 et 100 % des données, et analyse Grad-CAM de l'usage de l'audio. Projet d'Alexandre Gonzalez et Mark Kriov, 2026.">
+  <meta property="og:url" content="https://alexandregonzalezgh.github.io/projets/cassiopee/">
+  <meta property="og:image" content="https://alexandregonzalezgh.github.io/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1c1845">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../../index.css">
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html">A<span>.</span>GONZALEZ</a>
+    <nav aria-label="Navigation principale">
+      <ul class="site-nav">
+        <li><a href="../../index.html#projets">Projets</a></li>
+        <li><a href="../../index.html#parcours">Parcours</a></li>
+        <li><a href="../../index.html#competences">Compétences</a></li>
+        <li><a href="../../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="contenu">
+  <section class="band project-page">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Fil d'Ariane"><a href="../../index.html">Accueil</a> <span aria-hidden="true">/</span> <a href="../../index.html#projets">Projets</a> <span aria-hidden="true">/</span> <span aria-current="page">Cassiopée</span></nav>
+      <article class="case" id="cassiopee">
+        <div class="case-text">
+          <span class="tag">IA · Explicabilité</span>
+          <h1><span class="name">Cassiopée</span> <span class="desc">Les gestes 3D générés écoutent-ils vraiment l'audio ? Explicabilité de modèles de génération de gestes</span></h1>
+          <dl class="facts">
+            <div><dt>Période</dt><dd>janv. – mai 2026</dd></div>
+            <div><dt>Équipe</dt><dd>binôme avec Mark Kriov</dd></div>
+            <div><dt>Outils</dt><dd>Python, PyTorch, Blender</dd></div>
+          </dl>
+          <p>Comparaison de deux générateurs de gestes 3D à partir de la parole, GestureLSM (flow matching) et MambaTalk (modèle d'espace d'états sélectif), sur le jeu de données BEAT2, avec 100, 50 et 25 % des données d'entraînement. Les métriques usuelles (MSE, FGD) ne disent pas si un modèle exploite réellement le son : nous avons donc construit un pipeline d'explicabilité Grad-CAM temporel pour le vérifier.</p>
+          <p class="result"><strong>Résultat :</strong> à 25 % des données, MambaTalk se découple de l'audio alors que ses métriques restent stables (MSE autour de 0,025 et FGD autour de 1,5 à tous les niveaux). GestureLSM, lui, voit son FGD passer de 0,462 à 1,027.</p>
+          <h4>Ma contribution (côté MambaTalk)</h4>
+          <ul>
+            <li>Script de réduction des données d'entraînement à 50 % et 25 %, qui garde exactement les mêmes jeux de validation et de test</li>
+            <li>Entraînements et évaluations à 100, 50 et 25 % des données, courbes de perte</li>
+            <li>Analyse Grad-CAM des encodeurs audio du visage et du corps de MambaTalk : cartes de chaleur qui alignent forme d'onde, spectrogramme, mots et amplitude du gradient</li>
+            <li>Code de réarrangement du jeu de données et génération de TextGrid pour la démo</li>
+          </ul>
+          <h4>Réalisé par Mark Kriov (côté GestureLSM)</h4>
+          <ul>
+            <li>Entraînements de GestureLSM, ajout des fonctions d'interprétabilité dans l'entraînement et la visualisation, démo avec audio personnel</li>
+          </ul>
+          <h4>Limites</h4>
+          <ul>
+            <li>Pas de scores quantitatifs de fidélité de l'explication, faute de temps : l'analyse Grad-CAM reste qualitative</li>
+            <li>MambaTalk a été entraîné sur trois locuteurs, GestureLSM sur un seul, ce qui nuance la comparaison</li>
+          </ul>
+        </div>
+        <div class="case-visual">
+          <figure><img src="../../assets/gradcam-visage.jpg" alt="Cartes Grad-CAM de l'encodeur audio du visage de MambaTalk à 100 %, 50 % et 25 % des données" loading="lazy"><figcaption>MambaTalk, encodeur du visage : l'attention se disperse quand les données diminuent (100 %, 50 %, 25 %)</figcaption></figure>
+          <figure><img src="../../assets/gradcam-corps.jpg" alt="Cartes Grad-CAM de l'encodeur audio du corps de MambaTalk à 100 %, 50 % et 25 % des données" loading="lazy"><figcaption>MambaTalk, encodeur du corps : pic localisé à 100 %, activation quasi nulle à 25 %</figcaption></figure>
+          <figure class="poster-shot"><img src="../../assets/cassiopee-resultats.jpg" alt="Extrait du poster : tableau des métriques et cartes Grad-CAM à 100 % et 25 %" loading="lazy"><figcaption>Extrait du poster : métriques par quantité de données et cartes Grad-CAM</figcaption></figure>
+        </div>
+      </article>
+      <nav class="pager" aria-label="Autres projets">
+        <span></span><a class="next" href="../cyranose/index.html"><span>Projet suivant →</span><strong>CyraNose</strong></a>
+      </nav>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">© 2026 Alexandre Gonzalez · <a href="../../index.html">Accueil</a> · <a href="../../index.html#contact">Contact</a></footer>
+</body>
+</html>
